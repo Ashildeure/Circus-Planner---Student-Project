@@ -1,0 +1,70 @@
+
+Button{
+    -fx-background-color: #cdad84;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-margin: 5px;
+
+}
+Button:hover{
+-fx-background-color: #b38447;
+}
+
+TextArea, ChoiceBox{
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-margin: 8px;
+}
+.retour{
+    -fx-background-color: #f7f4b0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-margin: 5px;
+}
+
+.whiteBone{
+    -fx-text-fill: #ffffff;
+}
+
+.titre{
+    -fx-background-color: #b4aa9d;
+}
+
+.infoSup{
+    -fx-background-color: #b4aa9d;
+    -fx-border-radius: 15px;
+    -fx-border-color: #f9f6ee;
+    -fx-border-width: 1px;
+    -fx-background-radius: 15px;
+    -fx-padding: 5px;
+    
+}
+
+.arrierePlan{
+    -fx-background-color: #D3D3D3;
+}
+.ArriereCentre{
+    -fx-background-color: #f7d7ad;
+}
+
+.list-cell:even{
+    -fx-background-color:#f5f98b;
+}
+
+.list-cell:odd{
+    -fx-background-color:#f8aaaa;
+}
+.list-cell:even:hover{
+    -fx-background-color:#fafcc5;
+}
+.list-cell:odd:hover{
+    -fx-background-color:#fac6c6;
+}
+.list-cell:even:selected{
+    -fx-background-color:#f2f769;
+    -fx-text-fill: #000000;
+}
+.list-cell:odd:selected{
+    -fx-background-color:#f47171;
+    -fx-text-fill: #000000;
+}
