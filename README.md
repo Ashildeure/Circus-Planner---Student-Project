@@ -13,6 +13,8 @@ We developed this project as a team of five students using the **Scrum methodolo
 - **Event Planning**: Organize events that include one or more shows.  
 
 ## 🛠️ Technologies Used  
+- **HTML5**
+- **CSS** 
 - **Java**  
 - **JavaFX (FXML)**  
 - **MVC Architecture**  
