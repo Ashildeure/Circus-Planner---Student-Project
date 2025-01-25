@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" styleClass="arrierePlan" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" styleClass="titre" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="logo" accessibleHelp="LOGO" accessibleRoleDescription="LOGO" accessibleText="LOGO" fitHeight="80.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                    <HBox.margin>
+                        <Insets right="50.0" />
+                    </HBox.margin>
+                    <image>
+                        <Image url="@Img/logo.png" />
+                    </image></ImageView>
+                <Label alignment="CENTER" contentDisplay="CENTER" minWidth="350.0" prefHeight="24.0" prefWidth="310.0" text="Planifier l'émerveillement !" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font></Label>
+                <ImageView fitHeight="75.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+                    <image>
+                        <Image url="@Img/profilN.png" />
+                    </image></ImageView>
+            </children>
+        </HBox>
+    </top>
+    <bottom>
+        <Label text="Copyright © 2024 CircusPlanner" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="8.0" />
+            </font></Label>
+    </bottom>
+    <left>
+        <GridPane prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="224.0" minHeight="20.0" prefHeight="168.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="279.0" minHeight="30.0" prefHeight="279.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox prefHeight="270.0" prefWidth="100.0" styleClass="infoSup" GridPane.rowIndex="1">
+                    <children>
+                        <Label fx:id="previewTitre" style="-fx-font-weight: bolder;" text="Sélectionnez un artiste">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin></Label>
+                        <Label fx:id="previewDesc" alignment="TOP_LEFT" prefHeight="200.0">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin></Label>
+                        <Label text="Notes :">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin></Label>
+                        <TextArea fx:id="previewNotes" editable="false" prefHeight="200.0" prefWidth="200.0">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin></TextArea>
+                        <Button fx:id="btnModifier" mnemonicParsing="false" onAction="#handleModifierActeur" styleClass="whiteBone" text="Modifier">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                            </VBox.margin></Button>
+                    </children>
+                    <GridPane.margin>
+                        <Insets bottom="2.0" />
+                    </GridPane.margin>
+                </VBox>
+                <VBox prefHeight="208.0" prefWidth="100.0" styleClass="infoSup" GridPane.rowIndex="2">
+                    <children>
+                        <Label prefHeight="27.0" prefWidth="120.0" text="Mes Artistes">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="2.0" />
+                            </VBox.margin></Label>
+                  <ListView fx:id="listeActeurs" onDragDetected="#dragDetectedActeur" prefHeight="200.0" prefWidth="200.0" styleClass="listeViewCote" />
+                        <Button mnemonicParsing="false" onAction="#handleCreerActeur" styleClass="whiteBone" text="+ Créer artiste">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </VBox.margin></Button>
+                    </children>
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></VBox>
+                <Button fx:id="BtnRetour" mnemonicParsing="false" onAction="#handleBtnRetour" styleClass="retour" text="↩︎ Retour" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" />
+            </padding>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </GridPane>
+    </left>
+    <center>
+        <VBox prefHeight="524.0" prefWidth="400.0" style="-fx-background-color: #f7d7ad;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="tfTitre" minWidth="50.0" prefHeight="26.0" prefWidth="50.0" promptText="Titre">
+                    <VBox.margin>
+                        <Insets left="2.0" right="200.0" top="10.0" />
+                    </VBox.margin></TextField>
+                <ImageView fx:id="imgNumeroC" fitHeight="100.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="2.0" right="2.0" top="10.0" />
+                    </VBox.margin>
+               <image>
+                  <Image url="@Img/image-defaut.png" />
+               </image>
+                </ImageView>
+                <VBox alignment="CENTER" prefHeight="137.0" prefWidth="400.0">
+                    <children>
+                  <Label text="Acteurs" />
+                  <ListView fx:id="listeActeursSelect" onDragDropped="#dragDroppedActeurSelect" onDragEntered="#dragEnteredActeurSelect" onDragExited="#dragExitedActeurSelect" onDragOver="#dragOverActeurSelect" prefHeight="200.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></ListView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                              <Button fx:id="btnAddActeur" mnemonicParsing="false" onAction="#handleAjouterActeur" styleClass="whiteBone" text="+ Ajouter artiste">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin></Button>
+                        <ChoiceBox fx:id="cbActeurs" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="2.0" right="2.0" />
+                    </VBox.margin>
+                </VBox>
+            <HBox alignment="TOP_CENTER" minHeight="100.0" prefHeight="137.0" prefWidth="390.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Accessoire" />
+                        <ListView fx:id="listeAccessoires" prefHeight="200.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets right="2.0" />
+                           </VBox.margin></ListView>
+                        <Button mnemonicParsing="false" onAction="#handleAjouterAccessoire" styleClass="whiteBone" text="+ Ajouter accessoire">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Animal" />
+                        <ListView fx:id="listeAnimaux" prefHeight="200.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="2.0" />
+                           </VBox.margin></ListView>
+                        <Button mnemonicParsing="false" onAction="#handleAjouterAnimaux" styleClass="whiteBone" text="+ Ajouter animal">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnFinish" mnemonicParsing="false" onAction="#handleFinish" styleClass="whiteBone" text="Créer">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" />
+            </BorderPane.margin>
+         <padding>
+            <Insets right="5.0" top="5.0" />
+         </padding>
+        </VBox>
+    </center>
+</BorderPane>
